@@ -151,10 +151,13 @@
                                 </subviews>
                             </stackView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Clh-Iz-4pY">
-                                <rect key="frame" x="50" y="348" width="314" height="4"/>
+                                <rect key="frame" x="50" y="348" width="314" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Yz9-X6-7Ud"/>
+                                </constraints>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTB-A7-rvG">
-                                <rect key="frame" x="186.5" y="340" width="41.5" height="20"/>
+                                <rect key="frame" x="186.5" y="348" width="41.5" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="PTN-3E-xYV"/>
                                 </constraints>
@@ -171,12 +174,12 @@
                             <constraint firstItem="JTB-A7-rvG" firstAttribute="centerX" secondItem="bfP-Pm-bCJ" secondAttribute="centerX" id="TNo-Ve-gYp"/>
                             <constraint firstItem="Qkk-dV-QPg" firstAttribute="centerX" secondItem="bfP-Pm-bCJ" secondAttribute="centerX" id="VbD-Oi-rFA"/>
                             <constraint firstItem="Clh-Iz-4pY" firstAttribute="top" secondItem="tPV-l4-Wxa" secondAttribute="bottom" constant="30" id="ZP4-2F-wOb"/>
-                            <constraint firstItem="JTB-A7-rvG" firstAttribute="top" secondItem="tPV-l4-Wxa" secondAttribute="bottom" constant="22" id="cDA-AC-Vxq"/>
                             <constraint firstItem="tPV-l4-Wxa" firstAttribute="centerX" secondItem="bfP-Pm-bCJ" secondAttribute="centerX" id="esk-7j-Zke"/>
                             <constraint firstItem="kXH-R5-QWB" firstAttribute="bottom" secondItem="Qkk-dV-QPg" secondAttribute="bottom" constant="200" id="f07-xk-h8X"/>
                             <constraint firstItem="Clh-Iz-4pY" firstAttribute="leading" secondItem="kXH-R5-QWB" secondAttribute="leading" constant="50" id="gdl-Zg-pfM"/>
                             <constraint firstItem="tPV-l4-Wxa" firstAttribute="leading" secondItem="kXH-R5-QWB" secondAttribute="leading" constant="50" id="vlU-lk-iJe"/>
                             <constraint firstItem="kXH-R5-QWB" firstAttribute="trailing" secondItem="Clh-Iz-4pY" secondAttribute="trailing" constant="50" id="zBr-19-xMj"/>
+                            <constraint firstItem="JTB-A7-rvG" firstAttribute="top" secondItem="tPV-l4-Wxa" secondAttribute="bottom" constant="30" id="zPQ-ea-Qb8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Qvb-K0-C0H"/>
@@ -252,10 +255,13 @@
                                 </subviews>
                             </stackView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lld-Sh-dao">
-                                <rect key="frame" x="50" y="348" width="314" height="4"/>
+                                <rect key="frame" x="50" y="348" width="314" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="9su-ZD-sG6"/>
+                                </constraints>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUD-Tk-GcV">
-                                <rect key="frame" x="186.5" y="340" width="41.5" height="20"/>
+                                <rect key="frame" x="186.5" y="348" width="41.5" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="MWm-At-cZ6"/>
                                 </constraints>
@@ -267,7 +273,6 @@
                         <viewLayoutGuide key="safeArea" id="DII-LP-xzi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="lld-Sh-dao" firstAttribute="top" secondItem="iYe-CH-Zpk" secondAttribute="bottom" constant="30" id="49Q-el-VrP"/>
                             <constraint firstItem="dAy-jO-OYP" firstAttribute="centerX" secondItem="q2U-n3-V7C" secondAttribute="centerX" id="6CZ-QE-BOL"/>
                             <constraint firstItem="iYe-CH-Zpk" firstAttribute="top" secondItem="DII-LP-xzi" secondAttribute="top" constant="200" id="7cx-fc-9Fm"/>
                             <constraint firstItem="lld-Sh-dao" firstAttribute="leading" secondItem="DII-LP-xzi" secondAttribute="leading" constant="50" id="8om-44-wNz"/>
@@ -276,7 +281,8 @@
                             <constraint firstItem="iYe-CH-Zpk" firstAttribute="leading" secondItem="DII-LP-xzi" secondAttribute="leading" constant="50" id="Qg0-GE-CN7"/>
                             <constraint firstItem="UUD-Tk-GcV" firstAttribute="centerX" secondItem="q2U-n3-V7C" secondAttribute="centerX" id="R5G-BR-Fc4"/>
                             <constraint firstItem="DII-LP-xzi" firstAttribute="bottom" secondItem="dAy-jO-OYP" secondAttribute="bottom" constant="200" id="RLO-L8-zFg"/>
-                            <constraint firstItem="UUD-Tk-GcV" firstAttribute="top" secondItem="iYe-CH-Zpk" secondAttribute="bottom" constant="22" id="X1h-ml-hZ8"/>
+                            <constraint firstItem="lld-Sh-dao" firstAttribute="top" secondItem="iYe-CH-Zpk" secondAttribute="bottom" constant="30" id="Vac-HB-ltU"/>
+                            <constraint firstItem="UUD-Tk-GcV" firstAttribute="top" secondItem="iYe-CH-Zpk" secondAttribute="bottom" constant="30" id="Z4v-Re-tNc"/>
                             <constraint firstItem="DII-LP-xzi" firstAttribute="trailing" secondItem="iYe-CH-Zpk" secondAttribute="trailing" constant="50" id="xQN-2V-z0P"/>
                         </constraints>
                     </view>
@@ -354,10 +360,13 @@
                                 </subviews>
                             </stackView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PGw-pX-xvL">
-                                <rect key="frame" x="50" y="348" width="314" height="4"/>
+                                <rect key="frame" x="50" y="348" width="314" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="UhK-NV-dfA"/>
+                                </constraints>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qY-g2-GYx">
-                                <rect key="frame" x="186.5" y="340" width="41.5" height="20"/>
+                                <rect key="frame" x="186.5" y="348" width="41.5" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Gzp-Fa-Ntw"/>
                                 </constraints>
@@ -377,8 +386,8 @@
                             <constraint firstItem="Dfi-zP-Pva" firstAttribute="trailing" secondItem="PGw-pX-xvL" secondAttribute="trailing" constant="50" id="KfV-hE-coL"/>
                             <constraint firstItem="PGw-pX-xvL" firstAttribute="leading" secondItem="Dfi-zP-Pva" secondAttribute="leading" constant="50" id="XKO-wQ-SPp"/>
                             <constraint firstItem="Dfi-zP-Pva" firstAttribute="trailing" secondItem="XoH-wj-fOa" secondAttribute="trailing" constant="50" id="chy-hN-1bD"/>
+                            <constraint firstItem="8qY-g2-GYx" firstAttribute="top" secondItem="XoH-wj-fOa" secondAttribute="bottom" constant="30" id="dbG-w8-Geu"/>
                             <constraint firstItem="XoH-wj-fOa" firstAttribute="top" secondItem="Dfi-zP-Pva" secondAttribute="top" constant="200" id="pOl-js-cZc"/>
-                            <constraint firstItem="8qY-g2-GYx" firstAttribute="top" secondItem="XoH-wj-fOa" secondAttribute="bottom" constant="22" id="q55-wj-N8A"/>
                             <constraint firstItem="Dfi-zP-Pva" firstAttribute="bottom" secondItem="Dfc-0y-gq3" secondAttribute="bottom" constant="200" id="zp7-KY-NH5"/>
                         </constraints>
                     </view>

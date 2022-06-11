@@ -30,7 +30,7 @@ class MediumViewController: UIViewController {
     }
     
     func setupUI(){
-        title = "Medium"
+        title = "반숙"
         
         view.backgroundColor = .lightGray
         
@@ -53,8 +53,14 @@ class MediumViewController: UIViewController {
         mediumTimePauseButton.backgroundColor = .clear
         
         mediumProgressBar.progressViewStyle = .bar
-        mediumProgressBar.transform = mediumProgressBar.transform.scaledBy(x: 1, y: 10)
+        //mediumProgressBar.transform = mediumProgressBar.transform.scaledBy(x: 1, y: 10)
         mediumProgressBar.progress = 0.0
+        mediumProgressBar.tintColor = .darkGray
+        mediumProgressBar.backgroundColor = .white
+        mediumProgressBar.layer.cornerRadius = 5
+        mediumProgressBar.clipsToBounds = true
+        mediumProgressBar.layer.sublayers![1].cornerRadius = 5
+        mediumProgressBar.subviews[1].clipsToBounds = true
     }
 
     @IBAction func mediumTimeButtonTapped(_ sender: UIButton) {
@@ -62,10 +68,10 @@ class MediumViewController: UIViewController {
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [self] _ in
             if timeNumber != 0 {
                 timeNumber -= 1
-                let progressNumber: Float = Float(timeNumber) / 510
                 mediumTimeLabel.text = "\(timeNumber / 60)분 \(timeNumber % 60)초 남았습니다."
-                mediumProgressBar.setProgress((1 - progressNumber), animated: true)
-                mediumProgressLabel.text = "\((1 - progressNumber) * 100)%"
+                let progressNumber: Float = Float(timeNumber) / 510
+                mediumProgressBar.setProgress((1.0 - progressNumber), animated: true)
+                mediumProgressLabel.text = "\(Int((1.0 - progressNumber) * 100))%"
             } else {
                 timer?.invalidate()
                 mediumTimeLabel.text = "완료되었습니다!"

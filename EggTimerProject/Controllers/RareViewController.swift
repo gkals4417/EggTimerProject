@@ -29,7 +29,7 @@ class RareViewController: UIViewController {
     }
     
     func setupUI(){
-        title = "Rare"
+        title = "완전반숙"
         
         view.backgroundColor = .lightGray
         
@@ -51,12 +51,15 @@ class RareViewController: UIViewController {
         rareTimePauseButton.setTitleColor(.black, for: .normal)
         rareTimePauseButton.backgroundColor = .clear
         
-        rareProgressBar.progressViewStyle = .bar
-        rareProgressBar.transform = rareProgressBar.transform.scaledBy(x: 1, y: 10)
+        rareProgressBar.progressViewStyle = .default
+        //rareProgressBar.transform = rareProgressBar.transform.scaledBy(x: 1, y: 10)
         rareProgressBar.progress = 0.0
         rareProgressBar.tintColor = .darkGray
         rareProgressBar.backgroundColor = .white
-        
+        rareProgressBar.layer.cornerRadius = 5
+        rareProgressBar.clipsToBounds = true
+        rareProgressBar.layer.sublayers![1].cornerRadius = 5
+        rareProgressBar.subviews[1].clipsToBounds = true
     }
     
     @IBAction func rareTimeButtonTapped(_ sender: UIButton) {
@@ -64,10 +67,10 @@ class RareViewController: UIViewController {
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [self] _ in
             if timeNumber != 0 {
                 timeNumber -= 1
-                let progressNumber: Float = Float(timeNumber) / 390
                 rareTimeLabel.text = "\(timeNumber / 60)분 \(timeNumber % 60)초 남았습니다."
-                rareProgressBar.setProgress((1 - progressNumber), animated: true)
-                rareProgressLabel.text = "\(Int((1 - progressNumber) * 100))%"
+                let progressNumber: Float = Float(timeNumber) / 390
+                rareProgressBar.setProgress((1.0 - progressNumber), animated: true)
+                rareProgressLabel.text = "\(Int((1.0 - progressNumber) * 100))%"
             } else {
                 timer?.invalidate()
                 rareTimeLabel.text = "완료되었습니다!"

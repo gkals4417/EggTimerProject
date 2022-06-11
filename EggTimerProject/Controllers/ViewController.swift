@@ -30,15 +30,15 @@ class ViewController: UIViewController {
         mainLabel.text = "선택하세요."
         mainLabel.textColor = .black
         
-        rareButton.setTitle("Rare", for: .normal)
+        rareButton.setTitle("완전반숙", for: .normal)
         rareButton.setTitleColor(.black, for: .normal)
         rareButton.backgroundColor = .clear
         
-        mediumButton.setTitle("Medium", for: .normal)
+        mediumButton.setTitle("반숙", for: .normal)
         mediumButton.setTitleColor(.black, for: .normal)
         mediumButton.backgroundColor = .clear
         
-        welldoneButton.setTitle("Welldone", for: .normal)
+        welldoneButton.setTitle("완숙", for: .normal)
         welldoneButton.setTitleColor(.black, for: .normal)
         welldoneButton.backgroundColor = .clear
     }
@@ -53,6 +53,7 @@ class ViewController: UIViewController {
         navigationController?.navigationBar.compactAppearance = appearance
         navigationController?.navigationBar.tintColor = .black
         navigationController?.navigationBar.barTintColor = .clear
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     

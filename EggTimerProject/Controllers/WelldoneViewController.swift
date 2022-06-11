@@ -30,7 +30,7 @@ class WelldoneViewController: UIViewController {
     }
     
     func setupUI(){
-        title = "Welldone"
+        title = "완숙"
         
         view.backgroundColor = .lightGray
         
@@ -53,8 +53,14 @@ class WelldoneViewController: UIViewController {
         welldoneTimePauseButton.backgroundColor = .clear
         
         welldoneProgressBar.progressViewStyle = .bar
-        welldoneProgressBar.transform = welldoneProgressBar.transform.scaledBy(x: 1, y: 10)
-        welldoneProgressBar.progress = 1.0
+        //welldoneProgressBar.transform = welldoneProgressBar.transform.scaledBy(x: 1, y: 10)
+        welldoneProgressBar.progress = 0.0
+        welldoneProgressBar.tintColor = .darkGray
+        welldoneProgressBar.backgroundColor = .white
+        welldoneProgressBar.layer.cornerRadius = 5
+        welldoneProgressBar.clipsToBounds = true
+        welldoneProgressBar.layer.sublayers![1].cornerRadius = 5
+        welldoneProgressBar.subviews[1].clipsToBounds = true
     }
     
     @IBAction func welldoneTimeButtonTapped(_ sender: UIButton) {
@@ -62,10 +68,10 @@ class WelldoneViewController: UIViewController {
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [self] _ in
             if timeNumber != 0 {
                 timeNumber -= 1
-                let progressNumber: Float = Float(timeNumber) / 720
                 welldoneTimeLabel.text = "\(timeNumber / 60)분 \(timeNumber % 60)초 남았습니다."
-                welldoneProgressBar.setProgress((1 - progressNumber), animated: true)
-                welldoneProgressLabel.text = "\((1 - progressNumber) * 100)"
+                let progressNumber: Float = Float(timeNumber) / 720
+                welldoneProgressBar.setProgress((1.0 - progressNumber), animated: true)
+                welldoneProgressLabel.text = "\(Int((1.0 - progressNumber) * 100))%"
             } else {
                 timer?.invalidate()
                 welldoneTimeLabel.text = "완료되었습니다!"

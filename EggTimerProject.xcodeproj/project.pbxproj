@@ -62,7 +62,6 @@
 		4DE181142851DD5700B57FA3 /* EggTimerProject */ = {
 			isa = PBXGroup;
 			children = (
-				4DE181312851DE1A00B57FA3 /* Models */,
 				4DE181302851DE0C00B57FA3 /* Views */,
 				4DE181292851DDE000B57FA3 /* Controllers */,
 				4DE181152851DD5700B57FA3 /* AppDelegate.swift */,
@@ -91,13 +90,6 @@
 				4DE1811B2851DD5700B57FA3 /* Main.storyboard */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		4DE181312851DE1A00B57FA3 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
